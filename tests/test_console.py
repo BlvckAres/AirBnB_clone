@@ -10,6 +10,7 @@ import sys
 from io import StringIO
 import re
 import os
+import json
 
 
 class TestHBNBCommand(unittest.TestCase):
@@ -739,4 +740,3 @@ EOF  all  count  create  destroy  help  quit  show  update
 
 if __name__ == "__main__":
     unittest.main()
-

@@ -6,7 +6,7 @@
 <p align="center">An AirBnB clone.</p>
 
 ## Description
-In this project we take the first step towards building a full web application: the AirBnB clone.
+In this project, we take the first step towards building a full web application: the AirBnB clone.
 AirBnB clone is a web application, intergrating database storage, backend API and front-end interfacing.
 This is very important because we will use what we build during this project with all other following projects: HTML/CSS templating, database storage, API, front-end integration…
 
@@ -37,7 +37,7 @@ The above classes are handled by the abstracted storage engine defined in the
 [FileStorage](./models/engine/file_storage.py) class.
 
 Every time the backend is initialized, HolbertonBnB instantiates an instance of 
-`FileStorage` called `storage`. The `storage` object is loaded/re-loaded from 
+`FileStorage` is called `storage`. The `storage` object is loaded/re-loaded from 
 any class instances stored in the JSON file `file.json`. As class instances are 
 created, updated, or deleted, the `storage` object is used to register 
 corresponding changes in the `file.json`.
@@ -56,12 +56,12 @@ of the file `console.py` at the command line.
 
 ```
 $ echo "help" | ./console.py
-(hbnb) 
+(hbnb)
 Documented commands (type help <topic>):
 ========================================
 EOF  all  count  create  destroy  help  quit  show  update
 
-(hbnb) 
+(hbnb)
 $
 ```
 
