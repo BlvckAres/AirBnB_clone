@@ -8,7 +8,7 @@ import models
 class BaseModel:
     """ Represents the BaseModel class for the project."""
 
-    def __init__(self, **args, **kwargs):
+    def __init__(self, *args, **kwargs):
         """Initializes a the BaseModel
 
         Args:
