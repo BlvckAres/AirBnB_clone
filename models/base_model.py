@@ -1,11 +1,13 @@
 #!/usr/bin/python3
 """The following script is for the BaseModel class."""
+
 import datetime
 from uuid import uuid4
 import models
 
 
 class BaseModel:
+
     """ Represents the BaseModel class for the project."""
 
     def __init__(self, *args, **kwargs):
@@ -32,6 +34,7 @@ class BaseModel:
 
     def __str__(self):
         """Returns string representation of the class name, id, dict"""
+
         return "[{}] ({}) {}".\
             format(type(self).__name__, self.id, self.__dict__)
 
@@ -49,4 +52,3 @@ class BaseModel:
         ret_dict["created_at"] = self.created_at.isoformat()
         ret_dict["updated_at"] = self.updated_at.isoformat()
         return ret_dict
-
