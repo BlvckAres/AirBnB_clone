@@ -32,7 +32,6 @@ class BaseModel:
 
     def __str__(self):
         """Returns string representation of the class name, id, dict"""
-
         return "[{}] ({}) {}".\
             format(type(self).__name__, self.id, self.__dict__)
 
@@ -50,3 +49,4 @@ class BaseModel:
         ret_dict["created_at"] = self.created_at.isoformat()
         ret_dict["updated_at"] = self.updated_at.isoformat()
         return ret_dict
+
