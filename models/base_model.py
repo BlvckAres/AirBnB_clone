@@ -17,7 +17,6 @@ class BaseModel:
             self.id = str(uuid4())
             self.created_at = datetime.now()
             self.updated_at = datetime.now()
-            models.storage.new(self)
             return
 
         for key, value in kwargs.items():
@@ -34,6 +33,7 @@ class BaseModel:
         """Updates updated_at attribute with the current time"""
 
         self.updated_at = datetime.now()
+        models.storage.save()
 
     def to_dict(self):
         """Returns a dictionary containing all keys/values"""
