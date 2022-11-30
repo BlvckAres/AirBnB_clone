@@ -10,12 +10,21 @@ class BaseModel:
 
     """ Represents the BaseModel class for the project."""
 
-    def __init__(self):
+    def __init__(self, *args, **kwargs):
         """Initializes a the BaseModel """
 
-        self.id = str(uuid4())
-        self.created_at = datetime.now()
-        self.updated_at = datetime.now()
+        if kwargs == {}:
+            self.id = str(uuid4())
+            self.created_at = datetime.now()
+            self.updated_at = datetime.now()
+            models.storage.new(self)
+            return
+
+        for key, value in kwargs.items():
+            if key in ['created_at', 'updated_at']:
+                self.__dict__[key] = datetime.fromisoformat(value)
+            elif key != '__class__':
+                self.__dict__[key] = value
 
     def __str__(self):
         """Returns string representation of the class name, id, dict"""
